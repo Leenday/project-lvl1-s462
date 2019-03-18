@@ -8,4 +8,4 @@ publish:
 	npm publish
 
 lint:
-	npm eslint
+	npx eslint .
