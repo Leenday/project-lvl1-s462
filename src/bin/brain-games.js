@@ -1,3 +1,5 @@
 #!/usr/bin/env node
 
-import question from '..';
+import askUserName from '..';
+
+askUserName();
