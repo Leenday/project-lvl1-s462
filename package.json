@@ -1,0 +1,25 @@
+{
+  "name": "project_braingames",
+  "version": "1.0.0",
+  "description": "logic game",
+  "main": "index.js",
+  "bin": {
+    "gameStart": "src/bin/brain-games.js"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "game",
+    "logic",
+    "text"
+  ],
+  "author": "leenday",
+  "license": "ISC",
+  "devDependencies": {
+    "@babel/cli": "^7.2.3",
+    "@babel/core": "^7.3.4",
+    "@babel/node": "^7.2.2",
+    "@babel/preset-env": "^7.3.4"
+  }
+}
