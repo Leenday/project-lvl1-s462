@@ -1,6 +1,6 @@
 {
   "name": "god-of-logic",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "logic game",
   "main": "index.js",
   "bin": {
