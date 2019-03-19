@@ -8,3 +8,5 @@ export const isEven = (number) => {
 };
 
 export const roundsLeft = 3;
+
+export const sighns = ['*', '+', '-'];

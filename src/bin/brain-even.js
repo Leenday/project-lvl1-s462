@@ -1,5 +1,5 @@
 #!/usr/bin/env node
 
-import gameItSelf from '../evenLogic';
+import gameItSelf from '../games/evenLogic';
 
 gameItSelf();
