@@ -6,3 +6,5 @@ export const isEven = (number) => {
   }
   return 'yes';
 };
+
+export const roundsLeft = 3;
