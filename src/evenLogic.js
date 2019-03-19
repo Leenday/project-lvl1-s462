@@ -1,12 +1,11 @@
 import readlineSync from 'readline-sync';
-import { randomIntGenerator, isEven } from './functionTools';
+import { randomIntGenerator, isEven, roundsLeft } from './functionTools';
 
 const gameItSelf = () => {
   console.log('Welcome to the Brain Games!');
   console.log('Answer "yes" if number even otherwise answer "no". \n');
   const userName = readlineSync.question('May I have your name? ');
   console.log(`Hello, ${userName}!`);
-  const roundsLeft = 3;
   const counterOfIter = (round) => {
     if (round === 0) {
       console.log(`Congratulation, ${userName}!`);
