@@ -1,14 +1,14 @@
 import { cons } from 'hexlet-pairs';
-import { randomIntGenerator, isEven } from '../functionTools';
+import randomIntGenerator from '../functionTools';
 import gameRules from '..';
 
-const rules = 'Answer "yes" if number even otherwise answer "no". \n';
+const description = 'Answer "yes" if number even otherwise answer "no". \n';
 
 const gameDetails = () => {
   const question = randomIntGenerator(1, 100);
-  const rightAnswer = isEven(question);
+  const rightAnswer = question % 2 === 0 ? 'yes' : 'no';
   const gameItSelf = cons(question, rightAnswer);
   return gameItSelf;
 };
 
-export default () => gameRules(rules, gameDetails);
+export default () => gameRules(description, gameDetails);
