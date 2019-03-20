@@ -1,34 +1,40 @@
 import gameRules from '..';
 import { cons } from 'hexlet-pairs';
-import { randomIntGenerator, sighns } from '../functionTools';
+import randomIntGenerator from '../functionTools';
 
-const rules = 'What is the result of the expression? \n';
+const description = 'What is the result of the expression? \n';
 
 const brainCalc = () => {
   const firstNum = randomIntGenerator(0, 40);
   const secondNum = randomIntGenerator(0, 10);
-  const mathOperator = sighns[randomIntGenerator(0, 3)];
+  const sighns = ['*', '+', '-'];
+  const startPointRange = 0;
+  const endPointRange = 3;
+  const mathOperator = sighns[randomIntGenerator(startPointRange, endPointRange)];
 
   const question = (`${firstNum} ${mathOperator} ${secondNum}`);
 
-  let rightAnswer;
-
-  switch (mathOperator) {
-    case '*':
-      rightAnswer = firstNum * secondNum;
-      break;
-    case '+':
-      rightAnswer = firstNum + secondNum;
-      break;
-    case '-':
-      rightAnswer = firstNum - secondNum;
-      break;
-    default:
-      rightAnswer = NaN;
-  }
+  const rightAnswerGenerator = (operator) => {
+    let answer;
+    switch (operator) {
+      case '*':
+        answer = firstNum * secondNum;
+        break;
+      case '+':
+        answer = firstNum + secondNum;
+        break;
+      case '-':
+        answer = firstNum - secondNum;
+        break;
+      default:
+        answer = NaN;
+    }
+    return answer;
+  };
+  const rightAnswer = String(rightAnswerGenerator(mathOperator));
   const gameItSelf = cons(question, rightAnswer);
   return gameItSelf;
 };
 
 
-export default () => gameRules(rules, brainCalc);
+export default () => gameRules(description, brainCalc);
