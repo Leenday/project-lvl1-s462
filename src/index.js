@@ -1,7 +1,7 @@
 import readlineSync from 'readline-sync';
 import { car, cdr } from 'hexlet-pairs';
 
-const roundsLeft = 3;
+const roundsTotal = 3;
 
 const gameEngine = (description, gameData) => {
   console.log('Welcome to the Brain Games!');
@@ -30,7 +30,7 @@ const gameEngine = (description, gameData) => {
     }
     iter(round - 1);
   };
-  iter(roundsLeft);
+  iter(roundsTotal);
 };
 
 export default gameEngine;
