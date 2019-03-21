@@ -4,13 +4,13 @@ import { car, cdr } from 'hexlet-pairs';
 const roundsLeft = 3;
 
 const gameEngine = (description, gameData) => {
-  console.log(`Welcome to the Brain Games! \n${description}`);
-
+  console.log('Welcome to the Brain Games!');
+  console.log(`${description}`);
   const name = readlineSync.question('May I have your name? ');
 
   console.log(`Hello, ${name}! `);
 
-  const counterOfIter = (round) => {
+  const iter = (round) => {
     if (round === 0) {
       console.log(`Congratulation, ${name}!`);
       return;
@@ -28,9 +28,9 @@ const gameEngine = (description, gameData) => {
       console.log(`Let's try again, ${name}!`);
       return;
     }
-    counterOfIter(round - 1);
+    iter(round - 1);
   };
-  counterOfIter(roundsLeft);
+  iter(roundsLeft);
 };
 
 export default gameEngine;
