@@ -4,7 +4,7 @@ import randomIntGenerator from '../utils';
 
 const description = 'Find the greatest common divisor of given numbers.\n';
 
-const gcd = () => {
+const gameData = () => {
   const firstNum = randomIntGenerator(2, 60);
   const secondNum = randomIntGenerator(2, 60);
   const question = (`${firstNum} ${secondNum}`);
@@ -26,4 +26,4 @@ const gcd = () => {
   return gameItSelf;
 };
 
-export default () => gameRules(description, gcd);
+export default () => gameRules(description, gameData);

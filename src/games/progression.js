@@ -4,7 +4,7 @@ import randomIntGenerator from '../utils';
 
 const description = 'What number is missing in the progression?\n';
 
-const brainProgression = () => {
+const gameData = () => {
   const progressionGenerator = (a) => {
     const nStep = randomIntGenerator(1, 5);
     const nAmount = 10;
@@ -36,4 +36,4 @@ const brainProgression = () => {
   return gameItSelf;
 };
 
-export default () => gameRules(description, brainProgression);
+export default () => gameRules(description, gameData);

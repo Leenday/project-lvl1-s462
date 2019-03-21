@@ -4,7 +4,7 @@ import randomIntGenerator from '../utils';
 
 const description = 'What is the result of the expression? \n';
 
-const brainCalc = () => {
+const gameData = () => {
   const firstNum = randomIntGenerator(0, 40);
   const secondNum = randomIntGenerator(0, 10);
   const sighns = ['*', '+', '-'];
@@ -36,4 +36,4 @@ const brainCalc = () => {
 };
 
 
-export default () => gameRules(description, brainCalc);
+export default () => gameRules(description, gameData);

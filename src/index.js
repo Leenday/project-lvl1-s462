@@ -3,8 +3,8 @@ import { car, cdr } from 'hexlet-pairs';
 
 const roundsLeft = 3;
 
-const gameRules = (rule, gameData) => {
-  console.log(`Welcome to the Brain Games! \n${rule}`);
+const gameRules = (description, gameData) => {
+  console.log(`Welcome to the Brain Games! \n${description}`);
 
   const name = readlineSync.question('May I have your name? ');
 
