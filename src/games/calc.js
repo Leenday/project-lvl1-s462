@@ -1,6 +1,6 @@
 import gameRules from '..';
 import { cons } from 'hexlet-pairs';
-import randomIntGenerator from '../functionTools';
+import randomIntGenerator from '../utils';
 
 const description = 'What is the result of the expression? \n';
 
