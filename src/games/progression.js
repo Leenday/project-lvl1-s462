@@ -1,37 +1,28 @@
 import gameRules from '..';
-import { cons } from 'hexlet-pairs';
+import { cons, car, cdr } from 'hexlet-pairs';
 import randomIntGenerator from '../utils';
 
 const description = 'What number is missing in the progression?\n';
 
 const gameData = () => {
   const progressionGenerator = (a) => {
-    const nStep = randomIntGenerator(1, 5);
-    const nAmount = 10;
-    const aProgression = [];
-    let nNew = a;
-    for (let i = 0; i < nAmount; i += 1) {
-      aProgression[i] = nNew;
-      nNew += nStep;
+    const step = randomIntGenerator(1, 5);
+    const arrayLength = 10;
+    const randomElement = randomIntGenerator(1, arrayLength - 1);
+    const arrayProgression = [];
+    for (let i = 0; i < arrayLength; i += 1) {
+      arrayProgression[i] = a + step * i;
     }
-    return aProgression;
+    const rightAnswer = arrayProgression[randomElement];
+    arrayProgression[randomElement] = '..';
+    const quest = cons(rightAnswer, arrayProgression);
+    return quest;
   };
 
-  const aQuestion = progressionGenerator(randomIntGenerator(0, 60));
+  const quiz = progressionGenerator(randomIntGenerator(0, 60));
 
-  const nEncrypted = randomIntGenerator(0, 9);
-
-  const questionGenerator = (arr) => {
-    let result = ' ';
-    const sSpace = ' ';
-    const sReplacement = '..';
-    for (let i = 0; i < arr.length; i += 1) {
-      result += i === nEncrypted ? (sReplacement + sSpace) : (arr[i] + sSpace);
-    }
-    return result;
-  };
-  const question = questionGenerator(aQuestion);
-  const rightAnswer = String(aQuestion[nEncrypted]);
+  const question = cdr(quiz);
+  const rightAnswer = String(car(quiz));
   const gameItSelf = cons(question, rightAnswer);
   return gameItSelf;
 };
