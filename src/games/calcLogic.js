@@ -9,8 +9,7 @@ const brainCalc = () => {
   const secondNum = randomIntGenerator(0, 10);
   const sighns = ['*', '+', '-'];
   const startPointRange = 0;
-  const endPointRange = 3;
-  const mathOperator = sighns[randomIntGenerator(startPointRange, endPointRange)];
+  const mathOperator = sighns[randomIntGenerator(startPointRange, sighns.length)];
 
   const question = (`${firstNum} ${mathOperator} ${secondNum}`);
 
