@@ -5,15 +5,15 @@ import randomIntGenerator from '../utils';
 const description = 'Find the greatest common divisor of given numbers.\n';
 
 const rightAnswerGenerator = (firstArg, secondArg) => {
-  const iter = (divider) => {
-    if (firstArg % divider === 0 && secondArg % divider === 0) {
-      return divider;
+  const iter = (firstNum, secondNum) => {
+    if (secondNum === 0) {
+      return firstNum;
     }
-    return iter(divider - 1);
+    const remainder = firstNum > secondNum ? firstNum % secondNum : secondNum % firstNum;
+    const divider = firstNum < secondNum ? firstNum : secondNum;
+    return iter(divider, remainder);
   };
-  const isBigger = firstArg > secondArg;
-  const divider = isBigger ? secondArg : firstArg;
-  return iter(divider);
+  return iter(firstArg, secondArg);
 };
 
 const gameData = () => {
