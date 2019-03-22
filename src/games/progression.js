@@ -21,7 +21,7 @@ const gameData = () => {
 
   const quiz = progressionGenerator(randomIntGenerator(0, 60));
 
-  const question = cdr(quiz);
+  const question = cdr(quiz).join(' ');
   const rightAnswer = String(car(quiz));
   const gameItSelf = cons(question, rightAnswer);
   return gameItSelf;
