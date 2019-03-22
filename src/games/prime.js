@@ -1,10 +1,13 @@
 import { cons } from 'hexlet-pairs';
 import randomIntGenerator from '../utils';
-import gameRules from '..';
+import generatorGameData from '..';
 
 const description = 'Answer "yes" if given number is prime. Otherwise answer "no". \n';
 
 const isPrime = (number) => {
+  if (number <= 1) {
+    return false;
+  }
   const iter = (dividend, divider) => {
     if (divider === 1) {
       return true;
@@ -23,4 +26,4 @@ const gameData = () => {
   return gameItSelf;
 };
 
-export default () => gameRules(description, gameData);
+export default () => generatorGameData(description, gameData);
