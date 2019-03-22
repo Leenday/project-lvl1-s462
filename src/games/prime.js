@@ -13,7 +13,7 @@ const isPrime = (number) => {
     }
     return iter(dividend, divider - 1);
   };
-  return iter(number, Math.round(number / 2));
+  return iter(number, Math.round(Math.sqrt(number)));
 };
 
 const gameData = () => {
