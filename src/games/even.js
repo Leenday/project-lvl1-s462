@@ -1,6 +1,6 @@
 import { cons } from 'hexlet-pairs';
 import randomIntGenerator from '../utils';
-import gameRules from '..';
+import generatorGameData from '..';
 
 const description = 'Answer "yes" if number even otherwise answer "no". \n';
 
@@ -13,4 +13,4 @@ const gameData = () => {
   return gameItSelf;
 };
 
-export default () => gameRules(description, gameData);
+export default () => generatorGameData(description, gameData);

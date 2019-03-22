@@ -1,25 +1,25 @@
-import gameRules from '..';
+import generatorGameData from '..';
 import { cons, car, cdr } from 'hexlet-pairs';
 import randomIntGenerator from '../utils';
 
 const description = 'What number is missing in the progression?\n';
 
-const progressionGenerator = (a) => {
+const buildPairGameQnA = (num) => {
   const step = randomIntGenerator(1, 5);
   const arrayLength = 10;
-  const randomElement = randomIntGenerator(1, arrayLength - 1);
-  const arrayProgression = [];
+  const indexOfHiddenItem = randomIntGenerator(1, arrayLength - 1);
+  const questionNumbers = [];
   for (let i = 0; i < arrayLength; i += 1) {
-    arrayProgression[i] = a + step * i;
+    questionNumbers[i] = num + step * i;
   }
-  const rightAnswer = arrayProgression[randomElement];
-  arrayProgression[randomElement] = '..';
-  const quest = cons(rightAnswer, arrayProgression);
-  return quest;
+  const rightAnswer = questionNumbers[indexOfHiddenItem];
+  questionNumbers[indexOfHiddenItem] = '..';
+  const pairOfGameQnA = cons(rightAnswer, questionNumbers);
+  return pairOfGameQnA;
 };
 
 const gameData = () => {
-  const quiz = progressionGenerator(randomIntGenerator(0, 60));
+  const quiz = buildPairGameQnA(randomIntGenerator(0, 60));
 
   const question = cdr(quiz).join(' ');
   const rightAnswer = String(car(quiz));
@@ -27,4 +27,4 @@ const gameData = () => {
   return gameItSelf;
 };
 
-export default () => gameRules(description, gameData);
+export default () => generatorGameData(description, gameData);
