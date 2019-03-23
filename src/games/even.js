@@ -1,8 +1,8 @@
 import { cons } from 'hexlet-pairs';
 import randomIntGenerator from '../utils';
-import generatorGameData from '..';
+import gameLaunching from '..';
 
-const description = 'Answer "yes" if number even otherwise answer "no". \n';
+const description = 'Answer "yes" if number even otherwise answer "no".';
 
 const isEven = num => num % 2 === 0;
 
@@ -13,4 +13,4 @@ const generateGameData = () => {
   return gameItSelf;
 };
 
-export default () => generatorGameData(description, generateGameData);
+export default () => gameLaunching(description, generateGameData);

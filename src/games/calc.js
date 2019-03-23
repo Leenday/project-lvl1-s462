@@ -1,37 +1,32 @@
-import generatorGameData from '..';
+import gameLaunching from '..';
 import { cons } from 'hexlet-pairs';
 import randomIntGenerator from '../utils';
 
-const description = 'What is the result of the expression? \n';
+const description = 'What is the result of the expression?';
 
 const generateGameData = () => {
   const firstNum = randomIntGenerator(0, 40);
   const secondNum = randomIntGenerator(0, 10);
-  const signs = ['*', '+', '-'];
-  const mathOperator = signs[randomIntGenerator(0, signs.length)];
+  const operators = ['*', '+', '-'];
+  const mathOperator = operators[randomIntGenerator(0, operators.length)];
 
   const question = `${firstNum} ${mathOperator} ${secondNum}`;
 
   const generateRightAnswer = (operator, num1, num2) => {
-    let answer;
     switch (operator) {
       case '*':
-        answer = num1 * num2;
-        break;
+        return num1 * num2;
       case '+':
-        answer = num1 + num2;
-        break;
+        return num1 + num2;
       case '-':
-        answer = num1 - num2;
-        break;
+        return num1 - num2;
       default:
-        answer = NaN;
+        return operator;
     }
-    return answer;
   };
   const rightAnswer = String(generateRightAnswer(mathOperator, firstNum, secondNum));
   const gameItSelf = cons(question, rightAnswer);
   return gameItSelf;
 };
 
-export default () => generatorGameData(description, generateGameData);
+export default () => gameLaunching(description, generateGameData);

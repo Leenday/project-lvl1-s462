@@ -3,7 +3,7 @@ import { car, cdr } from 'hexlet-pairs';
 
 const roundsTotal = 3;
 
-const gameData = (description, gameEngine) => {
+const gameEnginePlay = (description, generateGameData) => {
   console.log('Welcome to the Brain Games!');
   console.log(description);
   const name = readlineSync.question('May I have your name? ');
@@ -15,7 +15,7 @@ const gameData = (description, gameEngine) => {
       console.log(`Congratulation, ${name}!`);
       return;
     }
-    const gameDetails = gameEngine();
+    const gameDetails = generateGameData();
     const question = car(gameDetails);
     const rightAnswer = cdr(gameDetails);
     console.log(`Question: ${question}`);
@@ -33,4 +33,4 @@ const gameData = (description, gameEngine) => {
   iter(roundsTotal);
 };
 
-export default gameData;
+export default gameEnginePlay;
