@@ -8,12 +8,10 @@ const getGreatestCommonDivisor = (firstNum, secondNum) => {
   if (secondNum === 0) {
     return firstNum;
   }
-  const remainder = firstNum > secondNum ? firstNum % secondNum : secondNum % firstNum;
-  const divider = firstNum < secondNum ? firstNum : secondNum;
-  return getGreatestCommonDivisor(divider, remainder);
+  return getGreatestCommonDivisor(secondNum, firstNum % secondNum);
 };
 
-const gameData = () => {
+const generateGameData = () => {
   const firstNum = randomIntGenerator(2, 60);
   const secondNum = randomIntGenerator(2, 60);
   const question = (`${firstNum} ${secondNum}`);
@@ -23,4 +21,4 @@ const gameData = () => {
   return gameItSelf;
 };
 
-export default () => generatorGameData(description, gameData);
+export default () => generatorGameData(description, generateGameData);
