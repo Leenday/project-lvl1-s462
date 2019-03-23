@@ -5,7 +5,7 @@ import generatorGameData from '..';
 const description = 'Answer "yes" if given number is prime. Otherwise answer "no". \n';
 
 const isPrime = (number) => {
-  if (number <= 1) {
+  if (number < 2) {
     return false;
   }
   const iter = (dividend, divider) => {
@@ -19,11 +19,11 @@ const isPrime = (number) => {
   return iter(number, Math.round(Math.sqrt(number)));
 };
 
-const gameData = () => {
+const generateGameData = () => {
   const question = randomIntGenerator(1, 192);
   const rightAnswer = isPrime(question) ? 'yes' : 'no';
   const gameItSelf = cons(question, rightAnswer);
   return gameItSelf;
 };
 
-export default () => generatorGameData(description, gameData);
+export default () => generatorGameData(description, generateGameData);
