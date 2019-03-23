@@ -4,10 +4,22 @@
 ```
 npm install -g god-of-logic
 ```
-## Even numbers game
+#### Even numbers game
 
-`[![asciicast](https://asciinema.org/a/D4DvIJGgFnkOF0WS8qMgnuzgY.svg)](https://asciinema.org/a/D4DvIJGgFnkOF0WS8qMgnuzgY)`
+[![asciicast](https://asciinema.org/a/D4DvIJGgFnkOF0WS8qMgnuzgY.svg)](https://asciinema.org/a/D4DvIJGgFnkOF0WS8qMgnuzgY)
+
+#### Calculator game
+
 [![asciicast](https://asciinema.org/a/jbvJWQWXVwSYhfJf0FbImdx9T.svg)](https://asciinema.org/a/jbvJWQWXVwSYhfJf0FbImdx9T)
+
+#### Greatest common divisor game
+
 [![asciicast](https://asciinema.org/a/gQ7abf5lYb3WR8FoDiMPXm7LB.svg)](https://asciinema.org/a/gQ7abf5lYb3WR8FoDiMPXm7LB)
+
+#### Guess the missing number
+
 [![asciicast](https://asciinema.org/a/XEvWlcQotTgGaBH9IcgVQQ16Z.svg)](https://asciinema.org/a/XEvWlcQotTgGaBH9IcgVQQ16Z)
+
+#### Is this a prime number
+
 [![asciicast](https://asciinema.org/a/CzGYLHzjRgAK1OGR1Dyt1JlF3.svg)](https://asciinema.org/a/CzGYLHzjRgAK1OGR1Dyt1JlF3)
