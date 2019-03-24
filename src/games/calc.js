@@ -8,7 +8,7 @@ const generateGameData = () => {
   const firstNum = randomIntGenerator(0, 40);
   const secondNum = randomIntGenerator(0, 10);
   const operators = ['*', '+', '-'];
-  const mathOperator = operators[randomIntGenerator(0, operators.length)];
+  const mathOperator = operators[randomIntGenerator(0, operators.length - 1)];
 
   const question = `${firstNum} ${mathOperator} ${secondNum}`;
 
