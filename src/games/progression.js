@@ -1,4 +1,4 @@
-import gameLaunching from '..';
+import launchGame from '..';
 import { cons } from 'hexlet-pairs';
 import randomIntGenerator from '../utils';
 
@@ -26,4 +26,4 @@ const generateGameData = () => {
   return gameItSelf;
 };
 
-export default () => gameLaunching(description, generateGameData);
+export default () => launchGame(description, generateGameData);

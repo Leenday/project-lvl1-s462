@@ -1,6 +1,6 @@
 import { cons } from 'hexlet-pairs';
 import randomIntGenerator from '../utils';
-import gameLaunching from '..';
+import launchGame from '..';
 
 const description = 'Answer "yes" if given number is prime. Otherwise answer "no".';
 
@@ -26,4 +26,4 @@ const generateGameData = () => {
   return gameItSelf;
 };
 
-export default () => gameLaunching(description, generateGameData);
+export default () => launchGame(description, generateGameData);

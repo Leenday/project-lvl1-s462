@@ -5,10 +5,10 @@ const roundsTotal = 3;
 
 const gameEnginePlay = (description, generateGameData) => {
   console.log('Welcome to the Brain Games!');
-  console.log(`${description} \n`);
+  console.log(`${description}\n`);
   const name = readlineSync.question('May I have your name? ');
 
-  console.log(`Hello, ${name}! \n`);
+  console.log(`Hello, ${name}!\n`);
 
   const iter = (round) => {
     if (round === 0) {
